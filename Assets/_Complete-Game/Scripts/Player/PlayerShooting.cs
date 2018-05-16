@@ -5,9 +5,10 @@ namespace CompleteProject
 {
     public class PlayerShooting : MonoBehaviour
     {
-        public int damagePerShot = 20;                  // The damage inflicted by each bullet.
-        public float timeBetweenBullets = 0.15f;        // The time between each shot.
-        public float range = 100f;                      // The distance the gun can fire.
+        private int GunType = 0;
+        public int damagePerShot;                  // The damage inflicted by each bullet.
+        public float timeBetweenBullets;        // The time between each shot.
+        public float range;                      // The distance the gun can fire.
 
 
         float timer;                                    // A timer to determine when to fire.
@@ -35,7 +36,14 @@ namespace CompleteProject
 			//faceLight = GetComponentInChildren<Light> ();
         }
 
-
+        private void Start()
+        {
+            //0 = アサルト
+            //1 = ミニガン
+            //2 = 
+            GunType = 0;
+            
+        }
         void Update ()
         {
             // Add the time since Update was last called to the timer.
@@ -62,6 +70,30 @@ namespace CompleteProject
                 // ... disable the effects.
                 DisableEffects ();
             }
+
+            //武器チェンジ
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                GunType = 0;
+                damagePerShot = 20;
+                timeBetweenBullets = 0.12f;
+                range = 100f;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                GunType = 1;
+                damagePerShot = 15;
+                timeBetweenBullets = 0.03f;
+                range = 100f;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                GunType = 2;
+                damagePerShot = 100;
+                timeBetweenBullets = 1.0f;
+                range = 7f;
+            }
+
         }
 
 
@@ -121,5 +153,6 @@ namespace CompleteProject
                 gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
             }
         }
+        
     }
 }

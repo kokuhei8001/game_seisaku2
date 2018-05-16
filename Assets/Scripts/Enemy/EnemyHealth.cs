@@ -36,7 +36,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-
+    //HPからダメージを引く判定
     public void TakeDamage (int amount, Vector3 hitPoint)
     {
         if(isDead)
