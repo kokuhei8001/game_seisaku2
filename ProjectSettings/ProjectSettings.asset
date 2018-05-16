@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 14
-  productGUID: 00000000000000000000000000000000
+  productGUID: 5ac6dd8a1add3854395af478c4ed534e
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 3
@@ -749,7 +749,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
   cloudProjectId: 0676726b-95cb-4fb1-9a18-b2b3364ce300
-  projectName: New Unity Project (1)
+  projectName: "\u30B2\u30FC\u30E0\u5236\u4F5C\u2161\u6539\u9020\u7528\u30C7\u30FC\u30BF"
   organizationId: kokuhei
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
