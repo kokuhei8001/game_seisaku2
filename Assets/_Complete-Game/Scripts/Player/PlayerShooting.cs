@@ -93,6 +93,13 @@ namespace CompleteProject
                 timeBetweenBullets = 1.0f;
                 range = 7f;
             }
+            if (Input.GetKeyDown(KeyCode.Alpha0))
+            {
+                GunType = 0;
+                damagePerShot = 100;
+                timeBetweenBullets = 0.01f;
+                range = 100;
+            }
 
         }
 
