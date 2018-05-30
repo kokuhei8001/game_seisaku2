@@ -6,7 +6,7 @@ namespace CompleteProject
     public class PlayerMovement : MonoBehaviour
     {
         public float speed = 6f;            // The speed that the player will move at.
-
+        public float stamina = 10;
 
         Vector3 movement;                   // The vector to store the direction of the player's movement.
         Animator anim;                      // Reference to the animator component.
@@ -27,6 +27,29 @@ namespace CompleteProject
             anim = GetComponent <Animator> ();
             playerRigidbody = GetComponent <Rigidbody> ();
         }
+
+        private void Update()
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                if (stamina > 0)
+                {
+                    speed = 12;
+                    stamina -= 1;
+                }
+            }
+            else
+            {
+                speed = 6;
+                if (stamina < 100)
+                {
+                    stamina += 0.5f;
+                }
+            }
+            Debug.Log(stamina);
+        }
+
+
 
 
         void FixedUpdate ()

@@ -5,7 +5,8 @@ namespace CompleteProject
 {
     public class PlayerShooting : MonoBehaviour
     {
-        private int GunType = 0;
+        [SerializeField]
+        public static int GunType = 0;
         public int damagePerShot;                  // The damage inflicted by each bullet.
         public float timeBetweenBullets;        // The time between each shot.
         public float range;                      // The distance the gun can fire.

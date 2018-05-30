@@ -107,18 +107,5 @@ namespace CompleteProject
             SceneManager.LoadScene (0);
         }
 
-        private void OnCollisionEnter(Collision collision)
-        {
-            var Item = GetComponent<Item>();
-            if (Item != null)
-            {
-                if (Item.num == 1)
-                {
-                   startingHealth += 50;
-                    DestroyObject(Item.gameObject);
-                }
-            }
-        }
-
     }
 }
