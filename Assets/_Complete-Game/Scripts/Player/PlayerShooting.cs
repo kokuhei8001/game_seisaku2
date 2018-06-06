@@ -96,7 +96,7 @@ namespace CompleteProject
             }
             if (Input.GetKeyDown(KeyCode.Alpha0))
             {
-                GunType = 0;
+                GunType = 10;
                 damagePerShot = 100;
                 timeBetweenBullets = 0.01f;
                 range = 100;
@@ -149,6 +149,29 @@ namespace CompleteProject
                 {
                     // ... the enemy should take damage.
                     enemyHealth.TakeDamage (damagePerShot, shootHit.point);
+
+                    //当たるたびに経験値
+                    if (GunType == 0)
+                    {
+                        GunLv.AR += 3;
+                    }
+                    if (GunType == 1)
+                    {
+                        GunLv.LMG += 1;
+                    }
+                    if (GunType == 2)
+                    {
+                        GunLv.SG += 3;
+                    }
+                    if (GunType == 3)
+                    {
+                        GunLv.SR += 5;
+                    }
+
+
+
+
+
                 }
 
                 // Set the second position of the line renderer to the point the raycast hit.
