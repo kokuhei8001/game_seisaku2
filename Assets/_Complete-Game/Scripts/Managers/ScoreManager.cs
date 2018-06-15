@@ -9,15 +9,13 @@ namespace CompleteProject
         public static int score;        // The player's score.
 
 
-        Text text;                      // Reference to the Text component.
-
+        Text text;
 
         void Awake ()
         {
-            // Set up the reference.
+
             text = GetComponent <Text> ();
 
-            // Reset the score.
             score = 0;
         }
 

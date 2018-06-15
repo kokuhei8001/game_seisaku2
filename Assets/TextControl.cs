@@ -33,19 +33,44 @@ public class TextControl : MonoBehaviour {
         //経験値
         if (type == 11)
         {
-            text.text = GunEP[0].ToString() ;
+            if (GunLv.ARLV == 10)
+            {
+                text.text = "∞";
+            }
+            else { text.text = GunEP[0].ToString(); }
         }
         if (type == 22)
         {
-            text.text = GunEP[1].ToString();
+            if (GunLv.LMGLV == 10)
+            {
+                text.text = "∞";
+            }
+            else
+            {
+                text.text = GunEP[1].ToString();
+            }
         }
         if (type == 33)
         {
-            text.text = GunEP[2].ToString();
+            if (GunLv.SGLV == 10)
+            {
+                text.text = "∞";
+            }
+            else
+            {
+                text.text = GunEP[2].ToString();
+            }
         }
         if (type == 44)
         {
-            text.text = GunEP[3].ToString();
+            if (GunLv.SRLV == 10)
+            {
+                text.text = "∞";
+            }
+            else
+            {
+                text.text = GunEP[3].ToString();
+            }
         }
 
         if (type == 111)

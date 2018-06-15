@@ -24,12 +24,10 @@ public class GunLv : MonoBehaviour {
     public static int LMGLV = 1;
     public static int SGLV = 1;
     public static int SRLV = 1;
-
-    // Use this for initialization
+    
     void Start () {
 	}
 	
-	// Update is called once per frame
 	void Update () {
 
         if (AR > LV[ARLV - 1])

@@ -153,19 +153,31 @@ namespace CompleteProject
                     //当たるたびに経験値
                     if (GunType == 0)
                     {
-                        GunLv.AR += 3;
+                        if (GunLv.ARLV <= 10)
+                        {
+                            GunLv.AR += 3;
+                        }
                     }
                     if (GunType == 1)
                     {
-                        GunLv.LMG += 1;
+                        if (GunLv.LMGLV <= 10)
+                        {
+                            GunLv.LMG += 1;
+                        }
                     }
                     if (GunType == 2)
                     {
-                        GunLv.SG += 3;
+                        if (GunLv.SGLV <= 10)
+                        {
+                            GunLv.SG += 3;
+                        }
                     }
                     if (GunType == 3)
                     {
-                        GunLv.SR += 5;
+                        if (GunLv.SRLV <= 10)
+                        {
+                            GunLv.SR += 5;
+                        }
                     }
 
 

@@ -18,12 +18,12 @@ public class Item : MonoBehaviour {
     }
 
 
-    private void OnTriggerEnter(Collision collision)
-    {
-        var player = GetComponent<PlayerRigit>();
-        if(player != null)
-        {
-            DestroyObject(this.gameObject);
-        }
-    }
+    //private void OnTriggerEnter(Collision collision)
+    //{
+    //    var player = GetComponent<PlayerRigit>();
+    //    if(player != null)
+    //    {
+    //        DestroyObject(this.gameObject);
+    //    }
+    //}
 }
