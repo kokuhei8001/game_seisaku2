@@ -82,6 +82,7 @@
     <Compile Include="Assets\_Complete-Game\Scripts\Player\PlayerShooting.cs" />
     <Compile Include="Assets\GunLv.cs" />
     <Compile Include="Assets\Item.cs" />
+    <Compile Include="Assets\ModeContlor.cs" />
     <Compile Include="Assets\PlayerRigit.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />

@@ -86,8 +86,8 @@ namespace CompleteProject
             enemyAudio.clip = deathClip;
             enemyAudio.Play ();
 
-            //kokubu
-            GunLv.AR += 100;
+            //debug
+            //GunLv.AR += 100;
         }
 
 

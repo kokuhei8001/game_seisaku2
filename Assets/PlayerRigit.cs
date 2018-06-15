@@ -14,16 +14,16 @@ public class PlayerRigit : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerEnter(Collision collision)
-    {
-        var Item = GetComponent<Item>();
-        if (Item != null)
-        {
-            if (Item.num == 1)
-            {
-                //PlayerHealth.currentHealth += 50;
-                DestroyObject(Item.gameObject);
-            }
-        }
-    }
+    //private void OnTriggerEnter(Collision collision)
+    //{
+    //    var Item = GetComponent<Item>();
+    //    if (Item != null)
+    //    {
+    //        if (Item.num == 1)
+    //        {
+    //            //PlayerHealth.currentHealth += 50;
+    //            DestroyObject(Item.gameObject);
+    //        }
+    //    }
+    //}
 }

@@ -8,14 +8,26 @@ public class TextControl : MonoBehaviour {
     [SerializeField]
     public int type;
     private int[] GunEP;
-    
-    // Use this for initialization
-    void Start () {
+    public static bool death = false;
 
+    [SerializeField]
+    private int minute;
+    [SerializeField]
+    private float seconds;
+    //　前のUpdateの時の秒数
+    private float oldSeconds;
+
+
+    private void Start()
+    {
+        minute = 0;
+        seconds = 0f;
+        oldSeconds = 0f;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+
+    // Update is called once per frame
+    void Update () {
         GunEP = new int[] { GunLv.AR, GunLv.LMG, GunLv.SG, GunLv.SR };
 
 
@@ -93,6 +105,25 @@ public class TextControl : MonoBehaviour {
             {
                 text.text = "Lv." + GunLv.LMGLV.ToString();
             }
+        }
+
+        if (type == 999)
+        {
+            if (death)
+            {
+                text.text = "Clear Time : " + minute.ToString("00") + ":" + ((int)seconds).ToString("00");
+            }
+            else
+            {
+                seconds += Time.deltaTime;
+                if (seconds >= 60f)
+                {
+                    minute++;
+                    seconds = seconds - 60;
+                }
+                oldSeconds = seconds;
+            }
+
         }
 
 
